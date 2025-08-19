@@ -107,6 +107,7 @@ jobs:
           cp -r ../public/* .
           git add .
           git commit -m "Auto deploy from ${{ github.repository }} at $(date -u)"
+          echo "complete git commit"
           git push origin ${{ env.TARGET_BRANCH }}
         env:
           GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
