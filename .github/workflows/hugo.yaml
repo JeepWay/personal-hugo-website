@@ -109,7 +109,7 @@ jobs:
           git commit -m "Auto deploy from ${{ github.repository }} at $(date -u)"
           git push origin ${{ env.TARGET_BRANCH }}
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
       #   with:
