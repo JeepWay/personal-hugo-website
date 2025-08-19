@@ -35,6 +35,7 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+          token: ${{ secrets.WORKFLOW_ACCESS }}
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
@@ -100,7 +101,7 @@ jobs:
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: Clone and commit the target repository
         run: |
-          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ env.TARGET_REPO }}.git target-repo
+          git clone https://${{ secrets.WORKFLOW_ACCESS }}@github.com/${{ env.TARGET_REPO }}.git target-repo
           cd target-repo
           git checkout ${{ env.TARGET_BRANCH }}
           rm -rf *
@@ -112,8 +113,10 @@ jobs:
       - name: Push changes to target repository
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.WORKFLOW_ACCESS }}
+          repository: ${{ env.TARGET_REPO }}
           branch: ${{ env.TARGET_BRANCH }}
+          force: true
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
       #   with:
