@@ -108,6 +108,7 @@ jobs:
           git add .
           git commit -m "Auto deploy from ${{ github.repository }} at $(date -u)"
           echo "complete git commit"
+          git status
       - name: Push changes to target repository
         uses: ad-m/github-push-action@master
         with:
