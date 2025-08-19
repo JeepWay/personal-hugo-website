@@ -24,11 +24,8 @@ jobs:
       NODE_VERSION: 22.18.0
       TZ: Asia/Taipei
       BASEURL: "https://jeepway.github.io/" 
-      USERNAME: "JeepWay"
-      USEREMAIL: "william.liu0731@gmail.com"
       TARGET_REPO: JeepWay/JeepWay.github.io
       TARGET_BRANCH: main
-      # GITHUB_TOKEN: ${{ secrets.WORKFLOW_ACCESS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -100,20 +97,22 @@ jobs:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: Clone and commit the target repository
+        id: clone-and-commit
         run: |
-          git clone https://${{ secrets.WORKFLOW_ACCESS }}@github.com/${{ env.TARGET_REPO }}.git target-repo
+          git clone https://github.com/${{ env.TARGET_REPO }}.git target-repo
           cd target-repo
           git checkout ${{ env.TARGET_BRANCH }}
           rm -rf *
-          cp -r ../public/* .
-          git add .
-          git commit -m "Auto deploy from ${{ github.repository }} at $(date -u)"
-          echo "complete git commit"
-          git status
-          echo "ls"
-          ls
-          echo "ls ../"
-          ls ../
+          cp -r ../public/* . || echo "No files to copy, proceeding..."
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Auto build from other repository at $(date '+%Y-%m-%d %H:%M')"
+            echo "complete git commit with changes"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
       - name: Push changes to target repository
         uses: ad-m/github-push-action@master
         with:
