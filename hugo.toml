@@ -1,0 +1,4 @@
+baseURL = 'https://jeepway.github.io/'
+languageCode = 'zh-tw'
+title = 'JeepWay Blog'
+theme = 'ananke'
