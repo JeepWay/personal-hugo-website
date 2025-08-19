@@ -24,6 +24,8 @@ jobs:
       NODE_VERSION: 22.18.0
       TZ: Asia/Taipei
       BASEURL: "https://jeepway.github.io/" 
+      USERNAME: "JeepWay"
+      USEREMAIL: "william.liu0731@gmail.com"
       TARGET_REPO: JeepWay/JeepWay.github.io
       TARGET_BRANCH: main
       GITHUB_TOKEN: ${{ secrets.WORKFLOW_ACCESS }}
@@ -73,8 +75,8 @@ jobs:
       - name: Configure Git
         run: |
           git config core.quotepath false
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
       - name: Cache restore
         id: cache-restore
         uses: actions/cache/restore@v4
