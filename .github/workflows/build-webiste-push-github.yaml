@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Build Website and Push to GitHub
 on:
   push:
     branches:
