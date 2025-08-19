@@ -28,7 +28,7 @@ jobs:
       USEREMAIL: "william.liu0731@gmail.com"
       TARGET_REPO: JeepWay/JeepWay.github.io
       TARGET_BRANCH: main
-      GITHUB_TOKEN: ${{ secrets.WORKFLOW_ACCESS }}
+      # GITHUB_TOKEN: ${{ secrets.WORKFLOW_ACCESS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -100,7 +100,7 @@ jobs:
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: Clone and commit the target repository
         run: |
-          git clone https://${{ env.GITHUB_TOKEN }}@github.com/${{ env.TARGET_REPO }}.git target-repo
+          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ env.TARGET_REPO }}.git target-repo
           cd target-repo
           git checkout ${{ env.TARGET_BRANCH }}
           rm -rf *
@@ -111,7 +111,7 @@ jobs:
       - name: Push changes to target repository
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ env.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.TARGET_BRANCH }}
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
