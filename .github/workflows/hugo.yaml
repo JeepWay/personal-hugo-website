@@ -98,7 +98,7 @@ jobs:
         with:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
-      - name: Push to target repository
+      - name: Clone and commit the target repository
         run: |
           git clone https://${{ env.GITHUB_TOKEN }}@github.com/${{ env.TARGET_REPO }}.git target-repo
           cd target-repo
@@ -108,9 +108,11 @@ jobs:
           git add .
           git commit -m "Auto deploy from ${{ github.repository }} at $(date -u)"
           echo "complete git commit"
-          git push origin ${{ env.TARGET_BRANCH }}
-        env:
-          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+      - name: Push changes to target repository
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ env.GITHUB_TOKEN }}
+          branch: ${{ env.TARGET_BRANCH }}
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
       #   with:
