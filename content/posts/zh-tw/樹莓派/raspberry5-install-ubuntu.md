@@ -1,10 +1,10 @@
 +++
 title = '在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制'
 date = '2025-08-04T08:51:38+08:00'
-lastmod = '2025-08-22T12:43:58+08:00'
+lastmod = '2025-08-22T07:13:00+08:00'
 draft = false
-categories = ['樹梅派']
-tags = ['樹梅派', 'ssh']
+categories = ['樹莓派']
+tags = ['樹莓派', 'ssh']
 +++
 
 # 在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制
@@ -67,7 +67,7 @@ tags = ['樹梅派', 'ssh']
 2. 打開 CMD，輸入 `ssh`，看有沒有跑出提示，有的話就是安裝成功。
 
 
-## 6. 安裝 OpenSSH Server (樹梅派上的 Ubuntu)
+## 6. 安裝 OpenSSH Server (樹莓派上的 Ubuntu)
 開啟 Ubuntu 的 shell，輸入以下命令來安裝 OpenSSH 的 Server 端，以讓我們的 Client 端可以透過 ssh 來連線。
 ```bash
 sudo apt update
@@ -94,6 +94,6 @@ sudo systemctl status ssh
     ssh ubuntu@192.168.115.46
     ```
     * username 是你設定的使用者名稱。
-    * rpi_HostIP 是樹梅派在當前網路下的 IP，可以透過 `hostname -I` 命令來查詢。
+    * rpi_HostIP 是樹莓派在當前網路下的 IP，可以透過 `hostname -I` 命令來查詢。
 2. 登入後會問要不要建立 Key，以及輸入密碼。確認無誤後，就可以進入到 Ubuntu 的 Bash。
 

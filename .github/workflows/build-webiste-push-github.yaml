@@ -108,6 +108,7 @@ jobs:
           git checkout ${{ env.TARGET_BRANCH }}
           rm -rf *
           cp -r ../public/* . || echo "No files to copy, proceeding..."
+          touch .nojekyll
           if [ -n "$(git status --porcelain)" ]; then
             git add .
             git commit -m "Auto build from other repository at $(date '+%Y-%m-%d %H:%M')"

@@ -1,10 +1,10 @@
 +++
 title = '在 Raspberry Pi 安裝 miniconda'
 date = '2025-08-11T09:35:44+08:00'
-lastmod = '2025-08-22T12:45:00+08:00'
+lastmod = '2025-08-22T07:13:00+08:00'
 draft = false
-categories = ['樹梅派']
-tags = ['樹梅派', 'miniconda']
+categories = ['樹莓派']
+tags = ['樹莓派', 'miniconda']
 +++
 
 # 在 Raspberry Pi 安裝 miniconda
@@ -14,7 +14,7 @@ tags = ['樹梅派', 'miniconda']
 因為在大部分情況下，Anaconda 的很多功能都用不到，所以安裝體積更小的 miniconda 才是好選擇。
 
 ## 下載 miniconda 安装包
-先使用 `uname -a` 來查看樹梅派的硬體架構，可以看到樹梅派是 aarch64，也就是 ARM64 架構。
+先使用 `uname -a` 來查看樹莓派的硬體架構，可以看到樹莓派是 aarch64，也就是 ARM64 架構。
 ```bash
 uname -a
 Linux rpiserver 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux
