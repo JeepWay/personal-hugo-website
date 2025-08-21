@@ -75,6 +75,10 @@ jobs:
           git config core.quotepath false
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
+      - name: Verify submodules
+        run: |
+          git submodule status
+          ls -la themes/LoveIt
       - name: Cache restore
         id: cache-restore
         uses: actions/cache/restore@v4
