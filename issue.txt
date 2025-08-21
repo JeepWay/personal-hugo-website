@@ -1,0 +1,7 @@
+# 版本問題
+$ hugo server
+Error: html/template:_markup/render-codeblock-goat.html:6:17: no such template "_default/_markup/render-codeblock.html"
+
+## 解決方法
+參考文章: https://discourse.gohugo.io/t/facing-error-while-setting-up-loveit-theme/55105
+把 Hugo 版本換成 0.145.0
