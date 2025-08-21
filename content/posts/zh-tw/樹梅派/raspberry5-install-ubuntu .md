@@ -2,7 +2,7 @@
 title = '在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制'
 date = '2025-08-04T08:51:38+08:00'
 lastmod = '2025-08-22T12:43:58+08:00'
-draft = true
+draft = false
 categories = ['樹梅派']
 tags = ['樹梅派', 'ssh']
 +++

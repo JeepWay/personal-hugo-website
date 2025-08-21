@@ -2,7 +2,7 @@
 title = '在 Raspberry Pi 5 安裝 Docker'
 date = '2025-08-08T09:18:16+08:00'
 lastmod = '2025-08-22T09:16:16+08:00'
-draft = true
+draft = false
 categories = ['樹梅派']
 tags = ['樹梅派', 'Docker']
 +++

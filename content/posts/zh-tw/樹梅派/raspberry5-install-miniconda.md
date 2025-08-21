@@ -2,7 +2,7 @@
 title = '在 Raspberry Pi 安裝 miniconda'
 date = '2025-08-11T09:35:44+08:00'
 lastmod = '2025-08-22T12:45:00+08:00'
-draft = true
+draft = false
 categories = ['樹梅派']
 tags = ['樹梅派', 'miniconda']
 +++
