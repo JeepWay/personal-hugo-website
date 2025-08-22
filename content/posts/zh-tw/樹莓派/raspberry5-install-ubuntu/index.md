@@ -23,9 +23,9 @@ tags = ['樹莓派', 'ssh']
 * 請使用官方電源！！！不然你高機率動不起來，或是動到一半就突然關機。
 * 製作開機隨身碟時，請確認隨身碟的**磁碟分割樣式**為 GPT，而不是MBR，用 MBR 的話會導致安裝時出現錯誤，詳情請見這個影片：[Windows 11 安装 Ubuntu 22.04 双系统步骤和注意事项](https://youtu.be/szlNPdAt3Kk?si=Ek3xTJiH0HBedR5d&t=152)。
 * 磁碟分割樣式的查看方式（Window11）為：電腦管理 > 磁碟管理 > 右鍵磁碟X (隨身碟所在磁碟) > 內容 > 磁碟區。
-![螢幕擷取畫面 2025-08-15 145812](https://hackmd.io/_uploads/r1Wo6L2dlg.png)
+![螢幕擷取畫面 2025-08-15 145812](disk-segment-type.png)
 * 如果是 MBR 的話，請把他換成 GPT，這部分可以使用經典的 [Rufus](https://rufus.ie/zh_TW/) 燒錄軟體來更改成 MBR，如下圖。
-![擷取畫面150155](https://hackmd.io/_uploads/B1ZssU2_ee.png)
+![rufus-set-GPT](rufus-set-GPT.png)
 
 
 ## 1. 下載 Raspberry Pi Imager
@@ -34,7 +34,7 @@ tags = ['樹莓派', 'ssh']
 
 ## 2. 燒錄 Bootloader 到 SD 卡
 1. 先選擇 Raspberry Pi 5
-    ![image](https://hackmd.io/_uploads/rJwVkERDge.png)
+    ![raspberry-imager](raspberry-imager.png)
 2. 選擇操作系統
     1. 往下拉選擇 Misc utility images
         ![螢幕擷取畫面 2025-08-04 210242](https://hackmd.io/_uploads/HyonkEAPxe.png)
