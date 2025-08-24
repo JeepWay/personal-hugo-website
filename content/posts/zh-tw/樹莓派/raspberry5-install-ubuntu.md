@@ -1,13 +1,13 @@
 ---
 title: 在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制
 date: '2025-08-04T20:51:38+08:00'
-lastmod: '2025-08-24T13:15:54+08:00'
-draft: false
+lastmod: '2025-08-25T01:32:04+08:00'
 categories:
 - 樹莓派
 tags:
 - 樹莓派
 - ssh
+draft: false
 featuredImage: https://lh3.googleusercontent.com/pw/AP1GczOIPfGpgqP4kz-93w6Y025cXh9Ao9AHgfFFGcxSo4vaVnoP-tsxyg4QqKh8XOJdYjnX9PtnQmVD1U_W8yVxMbxadP3lIw958vX4y-BJ7a88ZNdkMuBWKyEg1P-Nl2f-CE7MeA_uNKBJqG1vC6S848X_=w1111-h530-s-no-gm
 featuredImagePreview: null
 ---

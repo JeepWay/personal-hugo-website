@@ -1,13 +1,13 @@
 ---
 title: 在 Raspberry Pi 安裝 miniconda
 date: '2025-08-11T21:35:44+08:00'
-lastmod: '2025-08-24T16:06:20+08:00'
-draft: false
+lastmod: '2025-08-25T01:31:59+08:00'
 categories:
 - 樹莓派
 tags:
 - 樹莓派
 - Miniconda
+draft: false
 featuredImage: https://lh3.googleusercontent.com/pw/AP1GczOMoMMqDLhSCJ70DuG2pxShS61Lzp9OLtslZVVebqTyVk5FYlAesWLzRsKSlaCPMrjO7y-cnXruJMZdByMFLkfwCSTvfe5-MyFBJFNebi7PH-HVmq9aTONRX1SFHUOiGwlrdW6_eo6dkx6FCJLp9xzH=w819-h378-s-no-gm
 featuredImagePreview: null
 ---

@@ -1,12 +1,12 @@
 ---
 title: Linux 文件系統目錄結構（以 Ubuntu 為例）
 date: '2025-08-14T23:04:07+08:00'
-lastmod: '2025-08-24T16:18:43+08:00'
-draft: false
+lastmod: '2025-08-25T01:27:43+08:00'
 categories:
 - Ubuntu
 tags:
 - Ubuntu
+draft: false
 featuredImage: null
 featuredImagePreview: null
 ---

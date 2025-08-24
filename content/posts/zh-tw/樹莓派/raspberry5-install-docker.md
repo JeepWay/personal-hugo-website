@@ -1,13 +1,13 @@
 ---
 title: 在 Raspberry Pi 安裝 Docker
 date: '2025-08-08T10:03:24+08:00'
-lastmod: '2025-08-24T15:39:04+08:00'
-draft: false
+lastmod: '2025-08-25T01:32:01+08:00'
 categories:
 - 樹莓派
 tags:
 - 樹莓派
 - Docker
+draft: false
 featuredImage: https://lh3.googleusercontent.com/pw/AP1GczPts44kk5pco6h-_IMROjVzBKN9JGI-j95bUXWi4Lcja4Mbh3PwIKgdv7CISRbJ6rMKqmSY1ah7GA93VGOmHeHAf59Jqb3alqj2QKzSW0NVugx3hIJWlIJhCv8u4h22C03doWfaQnFYmJ81QQCblrKQ=w1029-h426-s-no-gm
 featuredImagePreview: null
 ---

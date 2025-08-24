@@ -1,12 +1,12 @@
 ---
 title: Window 11 下刪除雙系統中的 Ununtu
 date: '2025-08-14T01:42:18+08:00'
-lastmod: '2025-08-24T16:35:02+08:00'
-draft: false
+lastmod: '2025-08-25T01:28:35+08:00'
 categories:
 - Ubuntu
 tags:
 - Ubuntu
+draft: false
 featuredImage: null
 featuredImagePreview: null
 ---
