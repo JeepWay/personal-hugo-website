@@ -1,13 +1,19 @@
-+++
-title = 'Window 11 下刪除雙系統中的 Ununtu'
-date = '2025-08-14T01:42:18+08:00'
-lastmod = '2025-08-16T14:13:00+08:00'
-draft = false
-categories = ['Ubuntu']
-tags = ['Ubuntu', '雙系統']
-+++
+---
+title: Window 11 下刪除雙系統中的 Ununtu
+date: '2025-08-14T01:42:18+08:00'
+lastmod: '2025-08-24T16:35:02+08:00'
+draft: false
+categories:
+- Ubuntu
+tags:
+- Ubuntu
+featuredImage: null
+featuredImagePreview: null
+---
 
-# Window 11 下刪除雙系統中的 Ununtu
+當你在 Window 使用雙系統來安裝 Ubuntu 後，可能會遇到當初硬碟空間切的太多或太少，或是不想用 Ubuntu 了，想要移除的情況，這篇文章就是在介紹如何在雙系統下完整移除 Ubuntu。
+
+<!--more-->
 
 當初裝 Ununtu 的容量切得太大了，幾乎都沒用到，導致 C 槽幾乎沒有空間，所以想要把 Ubuntu 砍掉重裝
 
@@ -18,27 +24,27 @@ tags = ['Ubuntu', '雙系統']
 ## 刪除 Ununtu 占用的磁區
 
 搜尋並點擊**電腦管理**，對 Ubuntu 所在的磁碟 (通常會是 EXT 格式) 按右鍵，然後選擇**刪除磁碟區**。
-**備註：這邊的配置很怪，因為我之前用了 EaseUS Partition Master 來把 D 槽的一些容量切給 C 槽，導致 E 槽跟 1GB 空間出現問題，而 E 槽跟 1GB 空間對應原本的 Ubuntu 磁碟跟修復磁碟分割。**
-![image](https://hackmd.io/_uploads/B1xDuT5_xe.png)
+**備註：這邊的配置很怪，因為我之前用了 EaseUS Partition Master 來把 D 槽的一些容量切給 C 槽，導致 E 槽跟 1GB 空間出現問題，而 E 槽跟 1GB 空間對應原本的 Ubuntu 磁碟跟修復磁碟分割。**  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczOlcLQZTc06TkDrUXL91zczqBM9o-TftZkKiA_54IWs23q6X3OLEEx17dwFRMVP8QCHfGrC7L5mfYQt1F7mhmc3hZZzGCLZRoag7tLsspDM-Ph6U0lwu20HX7wMAyTRtq1yRIyUEnOOR-bO4zaV457v=w1158-h329-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step2" title="ubuntu-remove-from-window-step2">
 
-刪除後可以看到有尚未配置的空間，那這樣就是刪除了，如下面圖片
-![image](https://hackmd.io/_uploads/SkIuFTqOle.png)
+刪除後可以看到有尚未配置的空間，那這樣就是刪除了，如下面圖片  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczPSHKi6ruvJh_VtGq0pOL8xP-jF162k6SDuaxlJ_FWipbyXrftFO3YP6_dvXM67AwqFfc9dT67OelSevreXyCYYJ7s2icMqJRdi96-sDd6rwnIX3BF-RGvnXzbEXIPqtMY8rblRnMe6uVZJ33Fz5F8e=w1164-h218-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step2" title="ubuntu-remove-from-window-step2">
 
-刪除後，在對 C 槽按右鍵，然後選擇**延伸磁碟區**，來收回未使用的空間
-![image](https://hackmd.io/_uploads/BkjCY6qOxe.png)
+刪除後，在對 C 槽按右鍵，然後選擇**延伸磁碟區**，來收回未使用的空間  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczPudq1Po2Gd965_W7QVpj_Usb6AjNPayaay8KSTHhRBXD0PQ9ZQHdr11itulDb-RYnJ2BRZqvvtjURyj0e9lIuYkr_-QlhiGvN-AKw2gX7tMKD62ZMv_oV9kjO67paF31CPuaAJ6UHmxP4blDl-tQXR=w1169-h326-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step3" title="ubuntu-remove-from-window-step3">
 
-確認是要延伸的區域，點擊**下一步**
-![image](https://hackmd.io/_uploads/rJNH9pqOlg.png)
+確認是要延伸的區域，點擊**下一步**  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczPJAlK14adQGsE_PVaa7PGxxBl68kXU5r0RkVNFrD1TRhTmvBwmZ9rIySX1nw7xWITasikh_yP-eKbT3x8I1Umo9zfHhu8hXYFYzohqRNfaif7SElW6Hiyuwao-wsX6aw30Yn6MSV0lRQCtcORQaZWQ=w577-h453-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step4" title="ubuntu-remove-from-window-step4">
 
-然後就可以看到 C 槽的空間變大了
-![image](https://hackmd.io/_uploads/r1CBnT9uex.png)
+然後就可以看到 C 槽的空間變大了  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczOOj8Fb9aWW_-NEqF6O4SFJ0eyCHsrE5Jqtdh08nQjdHC1cIu3CV91YiTPVdpdNy_VsguAx1pq9TtTxYJJAPQbi8IPDyy15XfJrus9dDQe7JIl5sUsgq9O31hk_QR1UReq6pO3ZmBbj9Fq7A7j5hPff=w1174-h306-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step5" title="ubuntu-remove-from-window-step5">
 
 透過 diskpart 命令可以查看到磁碟分割 5 確實是復原用的。可以參考這支影片：[Windows 11基礎教學-如何刪除修復磁碟分割並延伸磁碟區](https://www.youtube.com/watch?v=O94exmppO38)
 
-![image](https://hackmd.io/_uploads/Bye3hT5_gg.png)
+<img src="https://lh3.googleusercontent.com/pw/AP1GczMcjeJvH0dNs5BtPbrqVLXvz0D6GL-iQsCickhV9hJCntR-z5jTNmujrAcgTXKmVWmjSDiMHfC_w8f5pKSrjrKMTnWCSsQlDwL_a1mtD3csQ2YVNxZVtCChSOaUajZSF3n7iYCG_TjnaB2Jxifg0L4v=w450-h369-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step6" title="ubuntu-remove-from-window-step6">
 
-接著就同樣做法刪除該磁碟區並延伸，結果如下面
-![image](https://hackmd.io/_uploads/SyC86a9dge.png)
+接著就同樣做法刪除該磁碟區並延伸，結果如下面  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczO-WiQd3xOnUE-k2BZ4cz8soTLA_ZlIYcSjQgqTJuWW04xciEkC4CdSuTXLgVecpd5EJ4uQ1aGBVjCb95_R6Oy7TVi4T8RvqZ5RDfLHJuUHcD_tA0gFb61OiSq01RD_xe9ZRrUWDtPHIgU6W_U3ROS0=w1173-h309-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step7" title="ubuntu-remove-from-window-step7">
 
 刪除磁碟區後，就不需要每次都進到 GRUB 來選擇作業系統，因為這是 Linux 用的，我們現在已經用不到了，所以需要重新設定 Bootloader 的開機方式，可以參考這個文章：[How to Remove Ubuntu Dual Boot from Windows 10](https://linuxhint.com/remove-ubuntu-dual-boot-from-windows-10/)，
 
@@ -51,12 +57,12 @@ C:\WINDOWS\system32> bcdedit /set "{bootmgr}" path \efi\microsoft\boot\bootmgfw.
 操作順利完成。
 ```
 
-然後重新開機來看成果，發現沒有直接以 Window 開機，而是進到 GUN GRUB 介面，也就是上面的命令沒有正確更改開機順序。此外，即便我們已經刪除 Ubuntu 所在的硬碟分區，GRUB 還是繼續工作，因為 GRUB 是存放在**EFI 系統磁碟分割裡面**。
-![image](https://hackmd.io/_uploads/BkQn0C9_ge.png)
+然後重新開機來看成果，發現沒有直接以 Window 開機，而是進到 GUN GRUB 介面，也就是上面的命令沒有正確更改開機順序。此外，即便我們已經刪除 Ubuntu 所在的硬碟分區，GRUB 還是繼續工作，因為 GRUB 是存放在**EFI 系統磁碟分割裡面**。  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczOacHwZOgha1YZXSbENnkrxLPlMQZ4vusHapqJ39qmcRNHWvDNtiXaPi4bFPU3GOkQwCagfp5sQPAgQSIqPvxejLmooGS7McimCKw-xfAajxfLv0aL4MA0OFoEEwA7OYgERmf9ydpS6Hwk2-fNBxrV8=w1219-h263-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step8" title="ubuntu-remove-from-window-step8">
 
 此時就先輸入在 GRUB 命令列 輸入 `exit` 來重啟電腦，然後一直按 **F2 鍵**來進到 BIOS。進入 BIOS 以後，到 Boot 頁籤，在 Boot priority order 區塊，使用 **F6 鍵**把 Window Boot Loader 移到最上面，然後按 **F10 鍵**儲存並重啟電腦，這樣之後開機就不會再進入到 GRUB 介面，而是直接開啟 Window 作業系統。
-至於要按下那些鍵來操作 BIOS 會取決於你的電腦，可以上網查詢相關資訊，我用的電腦是 Acer Aspire A515-57G。
-![image](https://hackmd.io/_uploads/HyVE1yo_ee.png)
+至於要按下那些鍵來操作 BIOS 會取決於你的電腦，可以上網查詢相關資訊，我用的電腦是 Acer Aspire A515-57G。  
+<img src="https://lh3.googleusercontent.com/pw/AP1GczM9E5_QHJWjfopmmcaL95vXVAVvDLS2GG26Wq52z1A9pRT6LDMnocbGCZbsMYTs0pBhsZmTmx-4EaY5J_J46tnP2xtoVq3ayW6R1G90lGn3kwsjPDy-icCGYiCQAzlPYL8PybWHVt7kyVSpGU--rPfL=w817-h521-s-no-gm?authuser=0" alt="ubuntu-remove-from-window-step9" title="ubuntu-remove-from-window-step9">
 
 如果你不想那麼麻煩，可以直接採用方法二 Using UEFI for changing Boot orders，重啟後就可以選擇進入到 BIOS。詳細不走可以參考[這篇的 step1](https://itsfoss.com/uninstall-ubuntu-linux-windows-dual-boot/)
 
@@ -196,4 +202,3 @@ ubuntu, Are you sure (Y/N)? Y
 
 X:\EFI> exit
 ```
-

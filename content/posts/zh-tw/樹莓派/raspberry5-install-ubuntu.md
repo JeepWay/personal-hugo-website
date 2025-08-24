@@ -1,13 +1,20 @@
-+++
-title = '在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制'
-date = '2025-08-04T08:51:38+08:00'
-lastmod = '2025-08-22T07:13:00+08:00'
-draft = false
-categories = ['樹莓派']
-tags = ['樹莓派', 'ssh']
-+++
+---
+title: 在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制
+date: '2025-08-04T20:51:38+08:00'
+lastmod: '2025-08-24T13:15:54+08:00'
+draft: false
+categories:
+- 樹莓派
+tags:
+- 樹莓派
+- ssh
+featuredImage: https://lh3.googleusercontent.com/pw/AP1GczOIPfGpgqP4kz-93w6Y025cXh9Ao9AHgfFFGcxSo4vaVnoP-tsxyg4QqKh8XOJdYjnX9PtnQmVD1U_W8yVxMbxadP3lIw958vX4y-BJ7a88ZNdkMuBWKyEg1P-Nl2f-CE7MeA_uNKBJqG1vC6S848X_=w1111-h530-s-no-gm
+featuredImagePreview: null
+---
 
-# 在 Raspberry Pi 5 安裝 Ubuntu Desktop，並用 SSH 遠端控制
+介紹如何在 Raspberry Pi 5 上安裝 Ubuntu Desktop，設置完使用者資訊和 wifi 後，再透過 ssh 來與之連線。
+
+<!--more-->
 
 ## 參考影片和文章
 - [2025更新版 - Raspberry Pi #22集 - 無痛安裝，免買鍵盤螢幕！(中文字幕)](https://www.youtube.com/watch?v=Vl2B2Zcxai0&list=PLFzg1I0R-W6yWjVEBhYtfYvoNB8iz2-xx)
@@ -23,9 +30,9 @@ tags = ['樹莓派', 'ssh']
 * 請使用官方電源！！！不然你高機率動不起來，或是動到一半就突然關機。
 * 製作開機隨身碟時，請確認隨身碟的**磁碟分割樣式**為 GPT，而不是MBR，用 MBR 的話會導致安裝時出現錯誤，詳情請見這個影片：[Windows 11 安装 Ubuntu 22.04 双系统步骤和注意事项](https://youtu.be/szlNPdAt3Kk?si=Ek3xTJiH0HBedR5d&t=152)。
 * 磁碟分割樣式的查看方式（Window11）為：電腦管理 > 磁碟管理 > 右鍵磁碟X (隨身碟所在磁碟) > 內容 > 磁碟區。
-![螢幕擷取畫面 2025-08-15 145812](disk-segment-type.png)
+<img src="https://lh3.googleusercontent.com/pw/AP1GczMlhgfisOSNHF4zI006GO-TqnyDXh8K1wB_1CY4TQdAxWIi-TiM0Nilshj58gLGHe1boaliAg5MZoIl9kX92fK6rU_fsu6pQGpHB6PHJy7ELU3Z_obUzxjE7IX73RFyiNJO5i_eojNXgecZ4UGeH-w=w547-h305-no-gm" alt="disk-segment-type" title="disk-segment-type">
 * 如果是 MBR 的話，請把他換成 GPT，這部分可以使用經典的 [Rufus](https://rufus.ie/zh_TW/) 燒錄軟體來更改成 MBR，如下圖。
-![rufus-set-GPT](rufus-set-GPT.png)
+<img src="https://lh3.googleusercontent.com/pw/AP1GczP4XWJL_wrOQp2Mk8v4bEt9iY_5s_wygT0_otlpOrAbH5x-lRh0XqzjOTHBrqQT_rCAWle0g2Sn83FNKsIhVpRrhw1kOHb1FvF1xyJDAGSGgJeL1T1BXwEW91xAH7W7EJcR6cehzTF8YtesdZjY5d08=w480-h341-s-no-gm" alt="rufus-set-GPT" title="rufus-set-GPT">
 
 
 ## 1. 下載 Raspberry Pi Imager
@@ -34,16 +41,16 @@ tags = ['樹莓派', 'ssh']
 
 ## 2. 燒錄 Bootloader 到 SD 卡
 1. 先選擇 Raspberry Pi 5
-    ![raspberry-imager](raspberry-imager.png)
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOWCJiLbklpT4vHtTptPRvXfCW9iisE4prIHLkGn82YD3PvOkna7g0_Es6jzBs0ldAtydNoZb9w-A3zEESRycq3DNK-Gx0byllQe8pi2eXsnZT5dR6Bdz9Z-uTVSDXwSxS30QE4uIUXl0GEl7Ueg7AD=w1167-h566-s-no-gm" alt="raspberry-imager" title="raspberry-imager">
 2. 選擇操作系統
     1. 往下拉選擇 Misc utility images
-        ![螢幕擷取畫面 2025-08-04 210242](https://hackmd.io/_uploads/HyonkEAPxe.png)
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczOJuMeyQw2Ljkpk7MgnFOn8RYZo2-hPh_PoTztNSqQhUQkDzm0OSCGuyOh5EZdpmNDwZybhQuMlq8oP3EK1bU_5TkwTgGAqeD5hZrYjQLi1Awt6rdYcCknnLChqQlF04uTp7JWBCMwu_Cii-E8DUK0g=w1171-h562-s-no-gm?authuser=0" alt="Misc utility images" title="Misc utility images">
     2. 選擇 Bootloader (Pi 5 family)
-        ![螢幕擷取畫面 2025-08-04 210529](https://hackmd.io/_uploads/Hyutx4Awxl.png)
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczNFYHgjxswy20d-OIY4k1UMN4NZ0A1MmJ_QWs3U4gZo_viRxTff52XN8kCuovvBoseThFhA5S9WGK0KiYitOPsJYMiEPZfXaTug12LvPkuVietp8Hj-HXWrFf1zgqw4jFI1mQ7iRxUg2vor9UyJWZ4C=w1165-h562-s-no-gm" alt="Bootloader (Pi 5 family)" title="Bootloader (Pi 5 family)">
     3. 選擇 NVMe/USB Boot。這個選項的意思是優先從 NVMe 開機，沒有的話則嘗試 USB，最後才嘗試 SD 卡。因為之後會使用 USB 來自製作開機碟，所以這個選項最適合我們。
-        ![螢幕擷取畫面 2025-08-04 210541](https://hackmd.io/_uploads/r1utlVAvxe.png)
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczNy5ISo-bOa_YuFlgLqqQsGnz6-eo2s1hyQBzLfcgEEvUnyt-t8hKS1yBBYuZxiI9aK8xmGwQcPxIdXliBIGXd_JNuhnPDaGBTjI8K2bTGuRfR6OsMDJMJvF3YM0_MsgnKL7-CmQGMhRG302xRGN1-Q=w1166-h564-s-no-gm?authuser=0" alt="NVMe USB Boot" title="NVMe USB Boot">
 3. 選擇要燒入的設備 (這邊是使用 SD 卡)
-    ![螢幕擷取畫面 2025-08-04 211237](https://hackmd.io/_uploads/Sy_WzNAvge.png)
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczN1vbSqyYSBzs71wpfOHxN9J3eAN7S5D2sc3dATsOm5I7LcfFlR4v62SfiPJtk0RTjkoYRUt4Ui5QX547lYRA35urnu_4hbo2NDWRRcLFwS5q-KE3r_Ukj-jPrZU2Vtc26bmGNWtQ5umhq6pHAb-mLY=w1168-h563-s-no-gm" alt="SD card" title="SD card">
 4. 設定好後，點擊 **下一步** 來燒把 Bootloader 燒錄到 SD 卡裡面。你可能會遇到防火牆阻擋 Raspberry Pi Imager 寫入 SD 卡，記得允許再從執行就好。
 5. 把燒錄完成的 SD 卡插入到樹莓派的 SD 卡插槽，然後開啟電源，如果看到電源附近附近的燈號恆亮綠燈，那就是已經把 Bootloader 寫好了。此時就可以樹莓派的電源關掉，然後取出 SD 卡，因為它只是用來載入 Bootloader。
 
@@ -52,7 +59,7 @@ tags = ['樹莓派', 'ssh']
 1. 樹莓派一樣選擇 Raspberry Pi 5。
 2. 選擇操作系統 Ubuntu Desktop 24.04.02 LTS，你也可以使用自定義的鏡像。
 3. 選擇要燒入的設備，然後點擊下一步，會被問是否要定義系統配置，這邊可以略過，因為進入 Ubuntu Desktop 時都要重新設定。
-![螢幕擷取畫面 2025-08-15 151547](https://hackmd.io/_uploads/SynE1wh_gx.png)
+<img src="https://lh3.googleusercontent.com/pw/AP1GczMbsBzfvRkWMYf3mIf0lSslRkftTTPCGdGOFqhlzE6vhTnruMJaao7p6H7xhZ1byhdbBAjosjqzkfeJsaY9Aoxz5teRtoMtlVaBHdHjLcH0uwKwJn51Cuuc_fL6hX35c336tg9rYCGwHJTLG8ofy4HI=w811-h334-s-no-gm" alt="deny-custom-configuration" title="deny-custom-configuration">
 4. 確認後就開始燒錄，這過程會蠻久的。
 
 
@@ -80,14 +87,14 @@ sudo systemctl status ssh
 
 
 ## 使用 SSH 登入樹莓派主機
-:::info
+{{< admonition type=info title="" open=true >}}
 確保樹莓派和你的電腦連接到同一 Wi-Fi 或 LAN 網路。
-:::
-:::info
+{{< /admonition >}}
+{{< admonition type=info title="" open=true >}}
 [[機派X] Day 3 - Bash 是啥東東](https://ithelp.ithome.com.tw/articles/10263811)
 * 在 Linux 中，我們將它的命令列界面（CLI）稱為 Shell，正如同前面提到的，CLI（也就是 Shell）是我們與 Ubuntu 互動的橋樑，只要在 Shell 中輸入指令就可以操作電腦。
 * 其實 Shell 還分很多種。Ubuntu 內建且預設使用的 Shell 就是 Bash。
-:::
+{{< /admonition >}}
 1. 在 shell 輸入以下命令
     ```bash
     # ssh <username>@<rpi_HostIP>
@@ -96,4 +103,3 @@ sudo systemctl status ssh
     * username 是你設定的使用者名稱。
     * rpi_HostIP 是樹莓派在當前網路下的 IP，可以透過 `hostname -I` 命令來查詢。
 2. 登入後會問要不要建立 Key，以及輸入密碼。確認無誤後，就可以進入到 Ubuntu 的 Bash。
-
